@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    color:black;
+}
+
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    list-style: none;
+    position:relative;
+    background-color: lightblue;
+    padding: 12px 20px;
+}
+
+.logo img{
+    width:80px;
+}
+
+.menu {
+    display:flex;
+}
+
+.menu li{
+    padding-left:30px;
+}
+
+.menu li a{
+    display:inline-block;
+    text-decoration: none;
+    color:black;
+    text-align:center;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover{
+    width:100%;
+    background-color:lightpink;
+    border-radius: 8px;
+}
+
+.close-menu, .open-menu{
+    position:absolute;
+    cursor:pointer;
+    font-size:1.5rem;
+    display:none;
+}
+
+.open-menu {
+    top:50%;
+    right:20px;
+}
+
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+
+#check{
+    display:none;
+}
+
+@media screen and (max-width:610px) {
+    .menu{
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        width:50%;
+        height:50vh;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:1;
+        background-color:lightpink;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {
+        margin-top:20px;
+    }
+    .menu li a{
+        padding:10px;
+    
+    }    
+    .open-menu , .close-menu{
+        display:block;
+    }
+}
