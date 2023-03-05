@@ -41,9 +41,22 @@ body{
 }
 
 .menu li a:hover{
+    background-color:lightpink;
+    transition: 0.15s ease-in-out;
+    border-radius: 8px;
+}
+
+.menu li a::after{
+    content: "";
+    position: absolute;
     width:100%;
     background-color:lightpink;
-    border-radius: 8px;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width:100%;
+    
 }
 
 .close-menu, .open-menu{
@@ -76,7 +89,7 @@ body{
         height:50vh;
         position:fixed;
         top:0;
-        right:0;
+        right:-100%;
         z-index:1;
         background-color:lightpink;
         transition: all 0.2s ease-in-out;
@@ -91,4 +104,5 @@ body{
     .open-menu , .close-menu{
         display:block;
     }
+    #check:checked ~ .menu {right: 0;}
 }
